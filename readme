@@ -1,0 +1,23 @@
+Impact Analysis of Hurricane Beryl (Category 5) in the Caribbean
+This project aims to analyze the impact and trajectory of Hurricane Beryl, a Category 5 hurricane, which is the first of its kind to hit the Caribbean in the month of June. Using data provided by the National Hurricane Center (NHC) and other meteorological sources, we explore the hurricane's path, intensity, and potential damage to infrastructure, residential areas, and the environment. Various types of visualizations, including 2D and 3D plots, as well as interactive charts, are used to present the findings.
+
+Table of Contents
+Introduction
+Data Sources
+Installation
+Usage
+Visualizations
+Hurricane Path
+Intensity Plot
+3D Path and Intensity Plot
+Interactive Chart
+Contributing
+License
+Introduction
+Hurricane Beryl, a Category 5 hurricane, made history by becoming the first hurricane of its strength to strike the Caribbean in June. This project aims to provide a comprehensive analysis of Beryl's trajectory, intensity, and the resulting damage. By leveraging data from the National Hurricane Center (NHC) and other meteorological sources, we aim to present our findings through various visualizations to better understand the hurricane's impact.
+
+Data Sources
+The data used in this project is sourced from:
+
+National Hurricane Center (NHC)
+Other meteorological sources
