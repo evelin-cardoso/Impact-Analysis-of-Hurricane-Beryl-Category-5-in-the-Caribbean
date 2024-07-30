@@ -1,0 +1,53 @@
+import matplotlib.pyplot as plt
+import plotly.express as px
+import pandas as pd
+import numpy as np
+from mpl_toolkits.mplot3d import Axes3D
+
+# Dados fictícios para a trajetória e intensidade do Furacão Beryl
+data_hurricane = {
+    'Date': ['2024-06-25', '2024-06-28', '2024-06-30', '2024-07-01'],
+    'Latitude': [10.0, 12.5, 15.0, 18.0],
+    'Longitude': [-60.0, -61.0, -62.0, -63.0],
+    'Wind Speed (km/h)': [56, 120, 240, 260],
+    'Category': [0, 3, 4, 5]
+}
+
+df_hurricane = pd.DataFrame(data_hurricane)
+
+# Gráfico da Trajetória do Furacão Beryl
+plt.figure(figsize=(10, 6))
+plt.plot(df_hurricane['Longitude'], df_hurricane['Latitude'], marker='o')
+plt.title('Trajetória do Furacão Beryl')
+plt.xlabel('Longitude')
+plt.ylabel('Latitude')
+plt.grid(True)
+plt.show()
+
+# Gráfico de Intensidade
+plt.figure(figsize=(10, 6))
+plt.plot(df_hurricane['Date'], df_hurricane['Wind Speed (km/h)'], marker='o')
+plt.title('Intensidade do Furacão Beryl')
+plt.xlabel('Data')
+plt.ylabel('Velocidade do Vento (km/h)')
+plt.grid(True)
+plt.show()
+
+# Gráfico 3D da Trajetória e Intensidade
+fig = plt.figure(figsize=(10, 6))
+ax = fig.add_subplot(111, projection='3d')
+
+ax.scatter(df_hurricane['Longitude'], df_hurricane['Latitude'], df_hurricane['Wind Speed (km/h)'], c='r', marker='o')
+
+ax.set_xlabel('Longitude')
+ax.set_ylabel('Latitude')
+ax.set_zlabel('Velocidade do Vento (km/h)')
+
+plt.title('Trajetória e Intensidade do Furacão Beryl (Gráfico 3D)')
+plt.show()
+
+# Gráfico Interativo usando Plotly
+fig = px.scatter_geo(df_hurricane, lat='Latitude', lon='Longitude', color='Wind Speed (km/h)', 
+                     size='Wind Speed (km/h)', hover_name='Date', 
+                     projection='natural earth', title='Trajetória e Intensidade do Furacão Beryl (Interativo)')
+fig.show()
